@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>ChatBot</h1>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            <div class="message bot">
+                <div class="avatar">🤖</div>
+                <div class="text">Hello! I am an intelligent assistant, created to answer all your questions?</div>
+            </div>
+        </div>
+
+        <form id="chat-form">
+            <div class="chat-input">
+                {% csrf_token %}
+                <input type="text" id="message-input" placeholder="Tapez un message..." required/>
+                <button type="submit" id="send-button"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="{% static 'js/chat.js' %}"></script>
+</body>
+</html>
