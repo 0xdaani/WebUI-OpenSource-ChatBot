@@ -1,4 +1,4 @@
-# LLM Web Chat with Ollama
+# LLM Web Chat with Ollama and Django
 
 A small test project to interact with open-source language models via [Ollama](https://ollama.com) and its API, using a simple Django-powered web interface.
 
